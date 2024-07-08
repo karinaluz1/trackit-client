@@ -1,16 +1,17 @@
+@use 'variables';
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'PT Sans', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
 }
 
 body {
+  @include variables.text;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #faf7f3;
+  background-color: variables.$bg;
+  color: variables.$b;
 }
 
 code {

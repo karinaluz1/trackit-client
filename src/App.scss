@@ -1,14 +1,21 @@
+@use 'variables';
+
 .content {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
   align-items: center;
+  width: 600px;
+}
+
+main {
+  width: 100%;
 }
 
 .container {
   border-radius: 10px;
-  width: 600px;
   padding: 12px;
-  background-color: pink;
+  background-color: variables.$w;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -20,7 +27,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px;
-  background-color: white;
+  background-color: variables.$bg;
 }
 
 .card-buttons {

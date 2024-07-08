@@ -1,0 +1,21 @@
+$primary: #9e9856;
+
+
+$bg: #f2f2f3;
+
+$w: #f8f8f9;
+$b: #1f242e;
+
+$primary-light: #bbb789;
+$primary-dark: #8e894d;
+
+$grey-light: #dbddda;
+$grey-dark: #989b94;
+
+@mixin text {
+    font-family: 'Nunito Sans', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+  }
