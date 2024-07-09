@@ -37,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "git-commit-msg-linter": "^5.0.8",
     "sass": "^1.77.6"
   }
 }
