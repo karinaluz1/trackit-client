@@ -1,0 +1,19 @@
+@use '../../variables';
+
+.primary {
+  background-color: variables.$primary;
+  color: variables.$w;
+  &:hover {
+    background-color: variables.$primary-dark;
+  }
+}
+
+.secondary {
+  outline: 1px solid variables.$grey-dark;
+  color: variables.$grey-dark;
+  &:hover {
+    background-color: variables.$grey-light;
+  }
+
+}
+

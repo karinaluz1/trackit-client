@@ -3,43 +3,25 @@ import './App.scss';
 import moment from 'moment'
 import Header from './components/header/header'
 import Card from './components/card/card'
+import Modal from './components/modal/modal'
+import Button from './components/button/button'
+import { useState } from 'react';
 
 function App() {
-  const cards = [
-    {
-      id: 1,
-      title: 'Task 1',
-      date: moment().format('MMMM Do YYYY, h:mm:ss a'),
-      complete: false
-    },
-    {
-      id: 1,
-      title: 'sdfgsdfgsdfg',
-      date: moment().format('MMMM Do YYYY, h:mm:ss a'),
-      complete: false
-    },
-    {
-      id: 1,
-      title: 'Task 1',
-      date: moment().format('MMMM Do YYYY, h:mm:ss a'),
-      complete: false
-    },
-    {
-      id: 1,
-      title: 'Task 1',
-      date: moment().format('MMMM Do YYYY, h:mm:ss a'),
-      complete: false
-    }
-  ]
+  const [addTaskModalVisible, setAddTaskModalVisible] = useState(false)
+  const cards = []
+
+  const handleAddTaskClick = () => {
+    setAddTaskModalVisible(true)
+  }
 
   return (
     <section className='content'>
+      <Modal visible={addTaskModalVisible} setVisible={setAddTaskModalVisible} />
       <Header />
       <main>
         <header className='container-header'>
-          <button className='container-button'>
-            Add task
-          </button>
+          <Button text='Add Task' type="primary" onClick={handleAddTaskClick} />
           <div className="custom-select">
             <select>
               <option selected>all</option>

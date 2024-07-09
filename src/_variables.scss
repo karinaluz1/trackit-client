@@ -6,11 +6,17 @@ $bg: #f2f2f3;
 $w: #f8f8f9;
 $b: #1f242e;
 
+$modal-backdrop: rgba(31, 36, 46, 0.2);
+
 $primary-light: #bbb789;
 $primary-dark: #8e894d;
 
 $grey-light: #dbddda;
 $grey-dark: #989b94;
+
+$transparent: rgba(255, 255, 255, 0);
+
+$bs: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 
 @mixin text {
     font-family: 'Nunito Sans', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

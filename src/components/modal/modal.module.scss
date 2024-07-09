@@ -1,0 +1,30 @@
+@use '../../variables';
+
+.modalWrapper {
+  position: absolute;
+  margin: auto;
+  z-index: 1;
+  background-color: variables.$modal-backdrop;
+  min-width: 100vw;
+  min-height: 100vh;
+
+  .modal {
+    background-color: variables.$w;
+    width: 500px;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 120px;
+    box-shadow: variables.$bs;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .modalFooter {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+  }
+}
