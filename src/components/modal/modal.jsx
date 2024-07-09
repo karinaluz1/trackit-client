@@ -21,7 +21,7 @@ const Modal = (props) => {
             </p>
             </div>
             <div className={Styles.modalFooter}>
-              <Button text='Close' type='secondary' onClick={handleCloseClick} />
+              <Button content='Close' type='secondary' onClick={handleCloseClick} />
             </div>
           </div>
         </div>

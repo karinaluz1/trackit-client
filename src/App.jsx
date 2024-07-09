@@ -9,7 +9,11 @@ import { useState } from 'react';
 
 function App() {
   const [addTaskModalVisible, setAddTaskModalVisible] = useState(false)
-  const cards = []
+  const cards = [{
+    title: 'Task 1',
+    date: new Date(),
+    complete: false
+  }]
 
   const handleAddTaskClick = () => {
     setAddTaskModalVisible(true)
@@ -21,7 +25,7 @@ function App() {
       <Header />
       <main>
         <header className='container-header'>
-          <Button text='Add Task' type="primary" onClick={handleAddTaskClick} />
+          <Button content='Add Task' type="primary" onClick={handleAddTaskClick} />
           <div className="custom-select">
             <select>
               <option selected>all</option>

@@ -1,6 +1,15 @@
 @use '../../variables';
 
+.icon {
+  padding: 0;
+  max-height: 32px;
+  line-height: 32px;
+  width: 32px;
+  max-width: 32px;
+}
+
 .primary {
+  border: variables.$primary;
   background-color: variables.$primary;
   color: variables.$w;
   &:hover {
@@ -9,11 +18,19 @@
 }
 
 .secondary {
-  outline: 1px solid variables.$grey-dark;
-  color: variables.$grey-dark;
+  border: 1px solid variables.$grey-dark;
+  color: variables.$b-l;
   &:hover {
-    background-color: variables.$grey-light;
+    background-color: variables.$grey-xl;
   }
 
 }
 
+.error {
+  border: 1px solid variables.$error;
+  background-color: variables.$error;
+  color: variables.$w;
+  &:hover {
+    background-color: variables.$error-dark;
+  }
+}
