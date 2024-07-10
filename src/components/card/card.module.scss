@@ -43,6 +43,12 @@
         display: block;
       }
 
+      input:checked ~ .title {
+        span {
+          text-decoration:1px solid line-through;
+        }
+      }
+
     }
 
     .title {
@@ -56,6 +62,10 @@
       font-size: 12px;
     }
   }
+}
+
+.complete {
+  opacity: 0.7;
 }
 
 .checkbox {

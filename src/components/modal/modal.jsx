@@ -3,37 +3,46 @@ import Button from '../button/button'
 import { useState } from 'react'
 
 const Modal = (props) => {
-
-  const handleCloseClick = () => {
-    props.setVisible(false)
-  }
-
   if (props.visible) {
     return (
       <div className={Styles.modalWrapper}>
           <div className={Styles.modal}>
-            <div className={Styles.modalHeading}>
-              <h1>Task Title</h1>
-            </div>
-            <div className={Styles.modalBody}>
-            <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
-            </div>
-            <div className={Styles.modalFooter}>
-              <Button content='Close' type='secondary' onClick={handleCloseClick} />
-            </div>
+            { props.children }
           </div>
         </div>
       )
   }
 }
 
+const Heading = (props) => {
+  return (
+    <div className={Styles.heading}>
+      { props.children }
+    </div>
+  )
+}
+
+const Body = (props) => {
+  return (
+    <div className={Styles.body}>
+      { props.children }
+    </div>
+  )
+}
+
+const Footer = (props) => {
+  return (
+    <div className={Styles.footer}>
+      { props.children }
+    </div>
+  )
+}
+
+Modal.Heading = Heading
+Modal.Body = Body
+Modal.Footer = Footer
+
 export default Modal
-
-
-
-
 
 
 

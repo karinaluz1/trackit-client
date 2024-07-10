@@ -35,3 +35,18 @@ button {
     transition: 250ms linear background-color;
   }
 }
+
+input {
+  color: variables.$b;
+  @include variables.text;
+}
+
+::placeholder {
+  color: variables.$grey-light;
+  font-weight: 400;
+}
+
+::-ms-input-placeholder {
+  color: variables.$grey-light;
+  font-weight: 400;
+}

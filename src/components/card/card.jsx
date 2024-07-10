@@ -4,24 +4,22 @@ import Button from '../button/button';
 import { useState } from 'react';
 
 function Card(props) {
-  const [done, setDone] = useState(false)
+  const [done, setDone] = useState(props.complete)
 
-  const handleCheckboxChange = (checked) => {
-    setDone(!checked)
+  const handleCheckboxChange = (event) => {
+    setDone(event.target.checked)
   }
 
   return (
-    <div className={Styles.card}>
+    <div className={[Styles.card, done ? Styles.complete : ''].join(' ')}>
       <div className={Styles.data}>
-
         <label className={Styles.label}>
-          <input type="checkbox" onChange={handleCheckboxChange} />
+          <input type="checkbox" onChange={handleCheckboxChange} checked={done} />
           <div className={Styles.checkbox}></div>
           <div className={Styles.title}>
             <span>{props.title}</span>
           </div>
         </label>
-
         <span className={Styles.date}>{moment().format("dddd, MMMM Do YYYY, h:mm:ss a")}</span>
       </div>
       <div className={Styles.buttons}>
@@ -33,14 +31,5 @@ function Card(props) {
 }
 
 export default Card;
-
-
-
-
-
-
-
-
-
 
 
