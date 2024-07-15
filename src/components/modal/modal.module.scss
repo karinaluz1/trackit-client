@@ -21,6 +21,25 @@
     gap: 24px;
 
     .heading {
+      .close {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 12px;
+        cursor: pointer;
+        color: variables.$grey-light;
+        transition: variables.$transition;
+
+        &:hover {
+          color: variables.$b;
+          transition: variables.$transition;
+        }
+
+        i {
+          font-size: 24px;
+        }
+      }
+
       input {
         font-size: 24px;
         padding: 4px 2px;
@@ -49,13 +68,35 @@
         resize: none;
         @include variables.text;
       }
+
+
     }
 
-    .modalFooter {
+    .footer {
       width: 100%;
       display: flex;
       justify-content: flex-end;
+      justify-content: space-between;
       gap: 12px;
+      font-size: 12px;
+
+      input {
+        padding: 4px 2px;
+        font-weight: 400;
+        @include variables.text;
+        background-color: variables.$transparent;
+        border: 1px solid variables.$grey-light;
+        outline: none;
+        font-size: 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: variables.$transition;
+
+        &:focus {
+          transition: variables.$transition;
+          border: 1px solid variables.$grey-dark;
+        }
+      }
     }
   }
 }

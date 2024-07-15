@@ -25,6 +25,8 @@ $transparent: rgba(255, 255, 255, 0);
 
 $bs: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 
+$transition: 250ms linear all;
+
 @mixin text {
     font-family: 'Nunito Sans', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

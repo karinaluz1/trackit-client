@@ -17,6 +17,9 @@ const Modal = (props) => {
 const Heading = (props) => {
   return (
     <div className={Styles.heading}>
+      <div className={Styles.close}>
+        <i className='fa-solid fa-xmark' onClick={props.handleClose}></i>
+      </div>
       { props.children }
     </div>
   )

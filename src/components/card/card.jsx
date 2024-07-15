@@ -20,7 +20,7 @@ function Card(props) {
             <span>{props.title}</span>
           </div>
         </label>
-        <span className={Styles.date}>{moment().format("dddd, MMMM Do YYYY, h:mm:ss a")}</span>
+        <span className={Styles.date}>{moment(props.dueDate).format("dddd, MMMM Do YYYY, h:mm:ss a")}</span>
       </div>
       <div className={Styles.buttons}>
       <Button content={<i className="fa-solid fa-pen"></i>} icon={true} type="secondary" />
